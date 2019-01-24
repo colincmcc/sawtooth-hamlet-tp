@@ -1,8 +1,7 @@
 pub mod game;
 pub mod payload;
 pub mod state;
-pub mod account;
-pub mod asset;
+
 
 
 use self::game::Game;

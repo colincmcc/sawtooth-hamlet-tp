@@ -21,9 +21,8 @@ log4rs = "0.8.1"
 zmq = "0.8.2"
 sawtooth-sdk ="0.1.0"
 protobuf = { version = "2.2.4", features = ["with-bytes", "with-serde"] }
-glob = "0.2.11"
 bytes = { version = "0.4", features = ["serde"] }
-cbor = "0.4.1"
 
 [build-dependencies]
 protoc-rust = "2.2.4"
+glob = "0.2.11"

@@ -13,7 +13,7 @@ use std::process;
 fn main() {
     let matches = clap_app!(xo =>
         (version: crate_version!())
-        (about: "XO Transaction Processor (Rust)")
+        (about: "Hamlet Transaction Processor (Rust)")
         (@arg connect: -C --connect +takes_value
          "connection endpoint for validator")
         (@arg verbose: -v --verbose +multiple
