@@ -24,9 +24,9 @@ use protobuf::ProtobufEnum as ProtobufEnum_imported_for_functions;
 #[derive(PartialEq,Clone,Default)]
 pub struct Asset {
     // message fields
-    pub name: ::protobuf::Chars,
-    pub description: ::protobuf::Chars,
-    pub owners: ::std::vec::Vec<::protobuf::Chars>,
+    pub name: ::std::string::String,
+    pub description: ::std::string::String,
+    pub owners: ::protobuf::RepeatedField<::std::string::String>,
     pub rules: ::protobuf::RepeatedField<super::rule::Rule>,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
@@ -41,23 +41,23 @@ impl Asset {
     // string name = 1;
 
     pub fn clear_name(&mut self) {
-        ::protobuf::Clear::clear(&mut self.name);
+        self.name.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_name(&mut self, v: ::protobuf::Chars) {
+    pub fn set_name(&mut self, v: ::std::string::String) {
         self.name = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_name(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_name(&mut self) -> &mut ::std::string::String {
         &mut self.name
     }
 
     // Take field
-    pub fn take_name(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.name, ::protobuf::Chars::new())
+    pub fn take_name(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.name, ::std::string::String::new())
     }
 
     pub fn get_name(&self) -> &str {
@@ -67,23 +67,23 @@ impl Asset {
     // string description = 2;
 
     pub fn clear_description(&mut self) {
-        ::protobuf::Clear::clear(&mut self.description);
+        self.description.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_description(&mut self, v: ::protobuf::Chars) {
+    pub fn set_description(&mut self, v: ::std::string::String) {
         self.description = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_description(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_description(&mut self) -> &mut ::std::string::String {
         &mut self.description
     }
 
     // Take field
-    pub fn take_description(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.description, ::protobuf::Chars::new())
+    pub fn take_description(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.description, ::std::string::String::new())
     }
 
     pub fn get_description(&self) -> &str {
@@ -97,21 +97,21 @@ impl Asset {
     }
 
     // Param is passed by value, moved
-    pub fn set_owners(&mut self, v: ::std::vec::Vec<::protobuf::Chars>) {
+    pub fn set_owners(&mut self, v: ::protobuf::RepeatedField<::std::string::String>) {
         self.owners = v;
     }
 
     // Mutable pointer to the field.
-    pub fn mut_owners(&mut self) -> &mut ::std::vec::Vec<::protobuf::Chars> {
+    pub fn mut_owners(&mut self) -> &mut ::protobuf::RepeatedField<::std::string::String> {
         &mut self.owners
     }
 
     // Take field
-    pub fn take_owners(&mut self) -> ::std::vec::Vec<::protobuf::Chars> {
-        ::std::mem::replace(&mut self.owners, ::std::vec::Vec::new())
+    pub fn take_owners(&mut self) -> ::protobuf::RepeatedField<::std::string::String> {
+        ::std::mem::replace(&mut self.owners, ::protobuf::RepeatedField::new())
     }
 
-    pub fn get_owners(&self) -> &[::protobuf::Chars] {
+    pub fn get_owners(&self) -> &[::std::string::String] {
         &self.owners
     }
 
@@ -156,13 +156,13 @@ impl ::protobuf::Message for Asset {
             let (field_number, wire_type) = is.read_tag_unpack()?;
             match field_number {
                 1 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.name)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.name)?;
                 },
                 2 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.description)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.description)?;
                 },
                 3 => {
-                    ::protobuf::rt::read_repeated_carllerche_string_into(wire_type, is, &mut self.owners)?;
+                    ::protobuf::rt::read_repeated_string_into(wire_type, is, &mut self.owners)?;
                 },
                 4 => {
                     ::protobuf::rt::read_repeated_message_into(wire_type, is, &mut self.rules)?;
@@ -254,17 +254,17 @@ impl ::protobuf::Message for Asset {
         unsafe {
             descriptor.get(|| {
                 let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "name",
                     |m: &Asset| { &m.name },
                     |m: &mut Asset| { &mut m.name },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "description",
                     |m: &Asset| { &m.description },
                     |m: &mut Asset| { &mut m.description },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_vec_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_repeated_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "owners",
                     |m: &Asset| { &m.owners },
                     |m: &mut Asset| { &mut m.owners },

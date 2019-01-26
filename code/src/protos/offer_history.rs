@@ -24,8 +24,8 @@ use protobuf::ProtobufEnum as ProtobufEnum_imported_for_functions;
 #[derive(PartialEq,Clone,Default)]
 pub struct OfferHistory {
     // message fields
-    pub offer_id: ::protobuf::Chars,
-    pub account_id: ::protobuf::Chars,
+    pub offer_id: ::std::string::String,
+    pub account_id: ::std::string::String,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
     pub cached_size: ::protobuf::CachedSize,
@@ -39,23 +39,23 @@ impl OfferHistory {
     // string offer_id = 1;
 
     pub fn clear_offer_id(&mut self) {
-        ::protobuf::Clear::clear(&mut self.offer_id);
+        self.offer_id.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_offer_id(&mut self, v: ::protobuf::Chars) {
+    pub fn set_offer_id(&mut self, v: ::std::string::String) {
         self.offer_id = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_offer_id(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_offer_id(&mut self) -> &mut ::std::string::String {
         &mut self.offer_id
     }
 
     // Take field
-    pub fn take_offer_id(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.offer_id, ::protobuf::Chars::new())
+    pub fn take_offer_id(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.offer_id, ::std::string::String::new())
     }
 
     pub fn get_offer_id(&self) -> &str {
@@ -65,23 +65,23 @@ impl OfferHistory {
     // string account_id = 2;
 
     pub fn clear_account_id(&mut self) {
-        ::protobuf::Clear::clear(&mut self.account_id);
+        self.account_id.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_account_id(&mut self, v: ::protobuf::Chars) {
+    pub fn set_account_id(&mut self, v: ::std::string::String) {
         self.account_id = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_account_id(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_account_id(&mut self) -> &mut ::std::string::String {
         &mut self.account_id
     }
 
     // Take field
-    pub fn take_account_id(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.account_id, ::protobuf::Chars::new())
+    pub fn take_account_id(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.account_id, ::std::string::String::new())
     }
 
     pub fn get_account_id(&self) -> &str {
@@ -99,10 +99,10 @@ impl ::protobuf::Message for OfferHistory {
             let (field_number, wire_type) = is.read_tag_unpack()?;
             match field_number {
                 1 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.offer_id)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.offer_id)?;
                 },
                 2 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.account_id)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.account_id)?;
                 },
                 _ => {
                     ::protobuf::rt::read_unknown_or_skip_group(field_number, wire_type, is, self.mut_unknown_fields())?;
@@ -176,12 +176,12 @@ impl ::protobuf::Message for OfferHistory {
         unsafe {
             descriptor.get(|| {
                 let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "offer_id",
                     |m: &OfferHistory| { &m.offer_id },
                     |m: &mut OfferHistory| { &mut m.offer_id },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "account_id",
                     |m: &OfferHistory| { &m.account_id },
                     |m: &mut OfferHistory| { &mut m.account_id },

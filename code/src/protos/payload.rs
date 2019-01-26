@@ -588,8 +588,8 @@ impl ::protobuf::reflect::ProtobufValue for TransactionPayload_PayloadType {
 #[derive(PartialEq,Clone,Default)]
 pub struct CreateAccount {
     // message fields
-    pub label: ::protobuf::Chars,
-    pub description: ::protobuf::Chars,
+    pub label: ::std::string::String,
+    pub description: ::std::string::String,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
     pub cached_size: ::protobuf::CachedSize,
@@ -603,23 +603,23 @@ impl CreateAccount {
     // string label = 1;
 
     pub fn clear_label(&mut self) {
-        ::protobuf::Clear::clear(&mut self.label);
+        self.label.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_label(&mut self, v: ::protobuf::Chars) {
+    pub fn set_label(&mut self, v: ::std::string::String) {
         self.label = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_label(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_label(&mut self) -> &mut ::std::string::String {
         &mut self.label
     }
 
     // Take field
-    pub fn take_label(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.label, ::protobuf::Chars::new())
+    pub fn take_label(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.label, ::std::string::String::new())
     }
 
     pub fn get_label(&self) -> &str {
@@ -629,23 +629,23 @@ impl CreateAccount {
     // string description = 2;
 
     pub fn clear_description(&mut self) {
-        ::protobuf::Clear::clear(&mut self.description);
+        self.description.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_description(&mut self, v: ::protobuf::Chars) {
+    pub fn set_description(&mut self, v: ::std::string::String) {
         self.description = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_description(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_description(&mut self) -> &mut ::std::string::String {
         &mut self.description
     }
 
     // Take field
-    pub fn take_description(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.description, ::protobuf::Chars::new())
+    pub fn take_description(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.description, ::std::string::String::new())
     }
 
     pub fn get_description(&self) -> &str {
@@ -663,10 +663,10 @@ impl ::protobuf::Message for CreateAccount {
             let (field_number, wire_type) = is.read_tag_unpack()?;
             match field_number {
                 1 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.label)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.label)?;
                 },
                 2 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.description)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.description)?;
                 },
                 _ => {
                     ::protobuf::rt::read_unknown_or_skip_group(field_number, wire_type, is, self.mut_unknown_fields())?;
@@ -740,12 +740,12 @@ impl ::protobuf::Message for CreateAccount {
         unsafe {
             descriptor.get(|| {
                 let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "label",
                     |m: &CreateAccount| { &m.label },
                     |m: &mut CreateAccount| { &mut m.label },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "description",
                     |m: &CreateAccount| { &m.description },
                     |m: &mut CreateAccount| { &mut m.description },
@@ -793,8 +793,8 @@ impl ::protobuf::reflect::ProtobufValue for CreateAccount {
 #[derive(PartialEq,Clone,Default)]
 pub struct CreateAsset {
     // message fields
-    pub name: ::protobuf::Chars,
-    pub description: ::protobuf::Chars,
+    pub name: ::std::string::String,
+    pub description: ::std::string::String,
     pub rules: ::protobuf::RepeatedField<super::rule::Rule>,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
@@ -809,23 +809,23 @@ impl CreateAsset {
     // string name = 1;
 
     pub fn clear_name(&mut self) {
-        ::protobuf::Clear::clear(&mut self.name);
+        self.name.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_name(&mut self, v: ::protobuf::Chars) {
+    pub fn set_name(&mut self, v: ::std::string::String) {
         self.name = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_name(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_name(&mut self) -> &mut ::std::string::String {
         &mut self.name
     }
 
     // Take field
-    pub fn take_name(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.name, ::protobuf::Chars::new())
+    pub fn take_name(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.name, ::std::string::String::new())
     }
 
     pub fn get_name(&self) -> &str {
@@ -835,23 +835,23 @@ impl CreateAsset {
     // string description = 2;
 
     pub fn clear_description(&mut self) {
-        ::protobuf::Clear::clear(&mut self.description);
+        self.description.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_description(&mut self, v: ::protobuf::Chars) {
+    pub fn set_description(&mut self, v: ::std::string::String) {
         self.description = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_description(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_description(&mut self) -> &mut ::std::string::String {
         &mut self.description
     }
 
     // Take field
-    pub fn take_description(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.description, ::protobuf::Chars::new())
+    pub fn take_description(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.description, ::std::string::String::new())
     }
 
     pub fn get_description(&self) -> &str {
@@ -899,10 +899,10 @@ impl ::protobuf::Message for CreateAsset {
             let (field_number, wire_type) = is.read_tag_unpack()?;
             match field_number {
                 1 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.name)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.name)?;
                 },
                 2 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.description)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.description)?;
                 },
                 3 => {
                     ::protobuf::rt::read_repeated_message_into(wire_type, is, &mut self.rules)?;
@@ -988,12 +988,12 @@ impl ::protobuf::Message for CreateAsset {
         unsafe {
             descriptor.get(|| {
                 let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "name",
                     |m: &CreateAsset| { &m.name },
                     |m: &mut CreateAsset| { &mut m.name },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "description",
                     |m: &CreateAsset| { &m.description },
                     |m: &mut CreateAsset| { &mut m.description },
@@ -1047,10 +1047,10 @@ impl ::protobuf::reflect::ProtobufValue for CreateAsset {
 #[derive(PartialEq,Clone,Default)]
 pub struct CreateHolding {
     // message fields
-    pub id: ::protobuf::Chars,
-    pub label: ::protobuf::Chars,
-    pub description: ::protobuf::Chars,
-    pub asset: ::protobuf::Chars,
+    pub id: ::std::string::String,
+    pub label: ::std::string::String,
+    pub description: ::std::string::String,
+    pub asset: ::std::string::String,
     pub quantity: i64,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
@@ -1065,23 +1065,23 @@ impl CreateHolding {
     // string id = 1;
 
     pub fn clear_id(&mut self) {
-        ::protobuf::Clear::clear(&mut self.id);
+        self.id.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_id(&mut self, v: ::protobuf::Chars) {
+    pub fn set_id(&mut self, v: ::std::string::String) {
         self.id = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_id(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_id(&mut self) -> &mut ::std::string::String {
         &mut self.id
     }
 
     // Take field
-    pub fn take_id(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.id, ::protobuf::Chars::new())
+    pub fn take_id(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.id, ::std::string::String::new())
     }
 
     pub fn get_id(&self) -> &str {
@@ -1091,23 +1091,23 @@ impl CreateHolding {
     // string label = 2;
 
     pub fn clear_label(&mut self) {
-        ::protobuf::Clear::clear(&mut self.label);
+        self.label.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_label(&mut self, v: ::protobuf::Chars) {
+    pub fn set_label(&mut self, v: ::std::string::String) {
         self.label = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_label(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_label(&mut self) -> &mut ::std::string::String {
         &mut self.label
     }
 
     // Take field
-    pub fn take_label(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.label, ::protobuf::Chars::new())
+    pub fn take_label(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.label, ::std::string::String::new())
     }
 
     pub fn get_label(&self) -> &str {
@@ -1117,23 +1117,23 @@ impl CreateHolding {
     // string description = 3;
 
     pub fn clear_description(&mut self) {
-        ::protobuf::Clear::clear(&mut self.description);
+        self.description.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_description(&mut self, v: ::protobuf::Chars) {
+    pub fn set_description(&mut self, v: ::std::string::String) {
         self.description = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_description(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_description(&mut self) -> &mut ::std::string::String {
         &mut self.description
     }
 
     // Take field
-    pub fn take_description(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.description, ::protobuf::Chars::new())
+    pub fn take_description(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.description, ::std::string::String::new())
     }
 
     pub fn get_description(&self) -> &str {
@@ -1143,23 +1143,23 @@ impl CreateHolding {
     // string asset = 4;
 
     pub fn clear_asset(&mut self) {
-        ::protobuf::Clear::clear(&mut self.asset);
+        self.asset.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_asset(&mut self, v: ::protobuf::Chars) {
+    pub fn set_asset(&mut self, v: ::std::string::String) {
         self.asset = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_asset(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_asset(&mut self) -> &mut ::std::string::String {
         &mut self.asset
     }
 
     // Take field
-    pub fn take_asset(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.asset, ::protobuf::Chars::new())
+    pub fn take_asset(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.asset, ::std::string::String::new())
     }
 
     pub fn get_asset(&self) -> &str {
@@ -1192,16 +1192,16 @@ impl ::protobuf::Message for CreateHolding {
             let (field_number, wire_type) = is.read_tag_unpack()?;
             match field_number {
                 1 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.id)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.id)?;
                 },
                 2 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.label)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.label)?;
                 },
                 3 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.description)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.description)?;
                 },
                 4 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.asset)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.asset)?;
                 },
                 5 => {
                     if wire_type != ::protobuf::wire_format::WireTypeVarint {
@@ -1300,22 +1300,22 @@ impl ::protobuf::Message for CreateHolding {
         unsafe {
             descriptor.get(|| {
                 let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "id",
                     |m: &CreateHolding| { &m.id },
                     |m: &mut CreateHolding| { &mut m.id },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "label",
                     |m: &CreateHolding| { &m.label },
                     |m: &mut CreateHolding| { &mut m.label },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "description",
                     |m: &CreateHolding| { &m.description },
                     |m: &mut CreateHolding| { &mut m.description },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "asset",
                     |m: &CreateHolding| { &m.asset },
                     |m: &mut CreateHolding| { &mut m.asset },
@@ -1371,12 +1371,12 @@ impl ::protobuf::reflect::ProtobufValue for CreateHolding {
 #[derive(PartialEq,Clone,Default)]
 pub struct CreateOffer {
     // message fields
-    pub id: ::protobuf::Chars,
-    pub label: ::protobuf::Chars,
-    pub description: ::protobuf::Chars,
-    pub source: ::protobuf::Chars,
+    pub id: ::std::string::String,
+    pub label: ::std::string::String,
+    pub description: ::std::string::String,
+    pub source: ::std::string::String,
     pub source_quantity: i64,
-    pub target: ::protobuf::Chars,
+    pub target: ::std::string::String,
     pub target_quantity: i64,
     pub rules: ::protobuf::RepeatedField<super::rule::Rule>,
     // special fields
@@ -1392,23 +1392,23 @@ impl CreateOffer {
     // string id = 1;
 
     pub fn clear_id(&mut self) {
-        ::protobuf::Clear::clear(&mut self.id);
+        self.id.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_id(&mut self, v: ::protobuf::Chars) {
+    pub fn set_id(&mut self, v: ::std::string::String) {
         self.id = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_id(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_id(&mut self) -> &mut ::std::string::String {
         &mut self.id
     }
 
     // Take field
-    pub fn take_id(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.id, ::protobuf::Chars::new())
+    pub fn take_id(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.id, ::std::string::String::new())
     }
 
     pub fn get_id(&self) -> &str {
@@ -1418,23 +1418,23 @@ impl CreateOffer {
     // string label = 2;
 
     pub fn clear_label(&mut self) {
-        ::protobuf::Clear::clear(&mut self.label);
+        self.label.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_label(&mut self, v: ::protobuf::Chars) {
+    pub fn set_label(&mut self, v: ::std::string::String) {
         self.label = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_label(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_label(&mut self) -> &mut ::std::string::String {
         &mut self.label
     }
 
     // Take field
-    pub fn take_label(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.label, ::protobuf::Chars::new())
+    pub fn take_label(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.label, ::std::string::String::new())
     }
 
     pub fn get_label(&self) -> &str {
@@ -1444,23 +1444,23 @@ impl CreateOffer {
     // string description = 3;
 
     pub fn clear_description(&mut self) {
-        ::protobuf::Clear::clear(&mut self.description);
+        self.description.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_description(&mut self, v: ::protobuf::Chars) {
+    pub fn set_description(&mut self, v: ::std::string::String) {
         self.description = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_description(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_description(&mut self) -> &mut ::std::string::String {
         &mut self.description
     }
 
     // Take field
-    pub fn take_description(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.description, ::protobuf::Chars::new())
+    pub fn take_description(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.description, ::std::string::String::new())
     }
 
     pub fn get_description(&self) -> &str {
@@ -1470,23 +1470,23 @@ impl CreateOffer {
     // string source = 4;
 
     pub fn clear_source(&mut self) {
-        ::protobuf::Clear::clear(&mut self.source);
+        self.source.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_source(&mut self, v: ::protobuf::Chars) {
+    pub fn set_source(&mut self, v: ::std::string::String) {
         self.source = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_source(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_source(&mut self) -> &mut ::std::string::String {
         &mut self.source
     }
 
     // Take field
-    pub fn take_source(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.source, ::protobuf::Chars::new())
+    pub fn take_source(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.source, ::std::string::String::new())
     }
 
     pub fn get_source(&self) -> &str {
@@ -1511,23 +1511,23 @@ impl CreateOffer {
     // string target = 6;
 
     pub fn clear_target(&mut self) {
-        ::protobuf::Clear::clear(&mut self.target);
+        self.target.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_target(&mut self, v: ::protobuf::Chars) {
+    pub fn set_target(&mut self, v: ::std::string::String) {
         self.target = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_target(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_target(&mut self) -> &mut ::std::string::String {
         &mut self.target
     }
 
     // Take field
-    pub fn take_target(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.target, ::protobuf::Chars::new())
+    pub fn take_target(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.target, ::std::string::String::new())
     }
 
     pub fn get_target(&self) -> &str {
@@ -1590,16 +1590,16 @@ impl ::protobuf::Message for CreateOffer {
             let (field_number, wire_type) = is.read_tag_unpack()?;
             match field_number {
                 1 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.id)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.id)?;
                 },
                 2 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.label)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.label)?;
                 },
                 3 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.description)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.description)?;
                 },
                 4 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.source)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.source)?;
                 },
                 5 => {
                     if wire_type != ::protobuf::wire_format::WireTypeVarint {
@@ -1609,7 +1609,7 @@ impl ::protobuf::Message for CreateOffer {
                     self.source_quantity = tmp;
                 },
                 6 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.target)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.target)?;
                 },
                 7 => {
                     if wire_type != ::protobuf::wire_format::WireTypeVarint {
@@ -1732,22 +1732,22 @@ impl ::protobuf::Message for CreateOffer {
         unsafe {
             descriptor.get(|| {
                 let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "id",
                     |m: &CreateOffer| { &m.id },
                     |m: &mut CreateOffer| { &mut m.id },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "label",
                     |m: &CreateOffer| { &m.label },
                     |m: &mut CreateOffer| { &mut m.label },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "description",
                     |m: &CreateOffer| { &m.description },
                     |m: &mut CreateOffer| { &mut m.description },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "source",
                     |m: &CreateOffer| { &m.source },
                     |m: &mut CreateOffer| { &mut m.source },
@@ -1757,7 +1757,7 @@ impl ::protobuf::Message for CreateOffer {
                     |m: &CreateOffer| { &m.source_quantity },
                     |m: &mut CreateOffer| { &mut m.source_quantity },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "target",
                     |m: &CreateOffer| { &m.target },
                     |m: &mut CreateOffer| { &mut m.target },
@@ -1821,9 +1821,9 @@ impl ::protobuf::reflect::ProtobufValue for CreateOffer {
 #[derive(PartialEq,Clone,Default)]
 pub struct AcceptOffer {
     // message fields
-    pub id: ::protobuf::Chars,
-    pub source: ::protobuf::Chars,
-    pub target: ::protobuf::Chars,
+    pub id: ::std::string::String,
+    pub source: ::std::string::String,
+    pub target: ::std::string::String,
     pub count: u64,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
@@ -1838,23 +1838,23 @@ impl AcceptOffer {
     // string id = 1;
 
     pub fn clear_id(&mut self) {
-        ::protobuf::Clear::clear(&mut self.id);
+        self.id.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_id(&mut self, v: ::protobuf::Chars) {
+    pub fn set_id(&mut self, v: ::std::string::String) {
         self.id = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_id(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_id(&mut self) -> &mut ::std::string::String {
         &mut self.id
     }
 
     // Take field
-    pub fn take_id(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.id, ::protobuf::Chars::new())
+    pub fn take_id(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.id, ::std::string::String::new())
     }
 
     pub fn get_id(&self) -> &str {
@@ -1864,23 +1864,23 @@ impl AcceptOffer {
     // string source = 2;
 
     pub fn clear_source(&mut self) {
-        ::protobuf::Clear::clear(&mut self.source);
+        self.source.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_source(&mut self, v: ::protobuf::Chars) {
+    pub fn set_source(&mut self, v: ::std::string::String) {
         self.source = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_source(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_source(&mut self) -> &mut ::std::string::String {
         &mut self.source
     }
 
     // Take field
-    pub fn take_source(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.source, ::protobuf::Chars::new())
+    pub fn take_source(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.source, ::std::string::String::new())
     }
 
     pub fn get_source(&self) -> &str {
@@ -1890,23 +1890,23 @@ impl AcceptOffer {
     // string target = 3;
 
     pub fn clear_target(&mut self) {
-        ::protobuf::Clear::clear(&mut self.target);
+        self.target.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_target(&mut self, v: ::protobuf::Chars) {
+    pub fn set_target(&mut self, v: ::std::string::String) {
         self.target = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_target(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_target(&mut self) -> &mut ::std::string::String {
         &mut self.target
     }
 
     // Take field
-    pub fn take_target(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.target, ::protobuf::Chars::new())
+    pub fn take_target(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.target, ::std::string::String::new())
     }
 
     pub fn get_target(&self) -> &str {
@@ -1939,13 +1939,13 @@ impl ::protobuf::Message for AcceptOffer {
             let (field_number, wire_type) = is.read_tag_unpack()?;
             match field_number {
                 1 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.id)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.id)?;
                 },
                 2 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.source)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.source)?;
                 },
                 3 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.target)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.target)?;
                 },
                 4 => {
                     if wire_type != ::protobuf::wire_format::WireTypeVarint {
@@ -2038,17 +2038,17 @@ impl ::protobuf::Message for AcceptOffer {
         unsafe {
             descriptor.get(|| {
                 let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "id",
                     |m: &AcceptOffer| { &m.id },
                     |m: &mut AcceptOffer| { &mut m.id },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "source",
                     |m: &AcceptOffer| { &m.source },
                     |m: &mut AcceptOffer| { &mut m.source },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "target",
                     |m: &AcceptOffer| { &m.target },
                     |m: &mut AcceptOffer| { &mut m.target },
@@ -2103,7 +2103,7 @@ impl ::protobuf::reflect::ProtobufValue for AcceptOffer {
 #[derive(PartialEq,Clone,Default)]
 pub struct CloseOffer {
     // message fields
-    pub id: ::protobuf::Chars,
+    pub id: ::std::string::String,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
     pub cached_size: ::protobuf::CachedSize,
@@ -2117,23 +2117,23 @@ impl CloseOffer {
     // string id = 1;
 
     pub fn clear_id(&mut self) {
-        ::protobuf::Clear::clear(&mut self.id);
+        self.id.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_id(&mut self, v: ::protobuf::Chars) {
+    pub fn set_id(&mut self, v: ::std::string::String) {
         self.id = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_id(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_id(&mut self) -> &mut ::std::string::String {
         &mut self.id
     }
 
     // Take field
-    pub fn take_id(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.id, ::protobuf::Chars::new())
+    pub fn take_id(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.id, ::std::string::String::new())
     }
 
     pub fn get_id(&self) -> &str {
@@ -2151,7 +2151,7 @@ impl ::protobuf::Message for CloseOffer {
             let (field_number, wire_type) = is.read_tag_unpack()?;
             match field_number {
                 1 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.id)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.id)?;
                 },
                 _ => {
                     ::protobuf::rt::read_unknown_or_skip_group(field_number, wire_type, is, self.mut_unknown_fields())?;
@@ -2219,7 +2219,7 @@ impl ::protobuf::Message for CloseOffer {
         unsafe {
             descriptor.get(|| {
                 let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "id",
                     |m: &CloseOffer| { &m.id },
                     |m: &mut CloseOffer| { &mut m.id },

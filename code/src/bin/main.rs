@@ -1,7 +1,7 @@
 
 use clap::{clap_app, crate_version};
 use lib_hamlet::handlers;
-use crate::handlers::XoTransactionHandler;
+use crate::handlers::hamlet_handler::HamletTransactionHandler;
 use log::{info, error};
 use log::LevelFilter;
 use log4rs::append::console::ConsoleAppender;
@@ -21,7 +21,7 @@ fn main() {
 
     let endpoint = matches
         .value_of("connect")
-        .unwrap_or("tcp://localhost:4004");
+        .unwrap_or("tcp://192.168.99.105:4004");
 
     let console_log_level;
     match matches.occurrences_of("verbose") {
@@ -57,7 +57,7 @@ fn main() {
         }
     }
 
-    let handler = XoTransactionHandler::new();
+    let handler = HamletTransactionHandler::new();
     let mut processor = TransactionProcessor::new(endpoint);
 
     info!("Console logging level: {}", console_log_level);

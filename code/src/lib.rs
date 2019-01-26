@@ -5,5 +5,5 @@ extern crate log4rs;
 extern crate sawtooth_sdk;
 
 pub mod handlers;
-pub mod hamlet_state;
+pub mod addressing;
 pub mod protos;

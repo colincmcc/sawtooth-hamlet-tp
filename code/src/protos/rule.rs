@@ -25,7 +25,7 @@ use protobuf::ProtobufEnum as ProtobufEnum_imported_for_functions;
 pub struct Rule {
     // message fields
     pub field_type: Rule_RuleType,
-    pub value: ::bytes::Bytes,
+    pub value: ::std::vec::Vec<u8>,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
     pub cached_size: ::protobuf::CachedSize,
@@ -58,19 +58,19 @@ impl Rule {
     }
 
     // Param is passed by value, moved
-    pub fn set_value(&mut self, v: ::bytes::Bytes) {
+    pub fn set_value(&mut self, v: ::std::vec::Vec<u8>) {
         self.value = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_value(&mut self) -> &mut ::bytes::Bytes {
+    pub fn mut_value(&mut self) -> &mut ::std::vec::Vec<u8> {
         &mut self.value
     }
 
     // Take field
-    pub fn take_value(&mut self) -> ::bytes::Bytes {
-        ::std::mem::replace(&mut self.value, ::bytes::Bytes::new())
+    pub fn take_value(&mut self) -> ::std::vec::Vec<u8> {
+        ::std::mem::replace(&mut self.value, ::std::vec::Vec::new())
     }
 
     pub fn get_value(&self) -> &[u8] {
@@ -91,7 +91,7 @@ impl ::protobuf::Message for Rule {
                     ::protobuf::rt::read_proto3_enum_with_unknown_fields_into(wire_type, is, &mut self.field_type, 1, &mut self.unknown_fields)?
                 },
                 2 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_bytes_into(wire_type, is, &mut self.value)?;
+                    ::protobuf::rt::read_singular_proto3_bytes_into(wire_type, is, &mut self.value)?;
                 },
                 _ => {
                     ::protobuf::rt::read_unknown_or_skip_group(field_number, wire_type, is, self.mut_unknown_fields())?;
@@ -170,7 +170,7 @@ impl ::protobuf::Message for Rule {
                     |m: &Rule| { &m.field_type },
                     |m: &mut Rule| { &mut m.field_type },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheBytes>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeBytes>(
                     "value",
                     |m: &Rule| { &m.value },
                     |m: &mut Rule| { &mut m.value },

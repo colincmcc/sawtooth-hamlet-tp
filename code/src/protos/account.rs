@@ -24,10 +24,10 @@ use protobuf::ProtobufEnum as ProtobufEnum_imported_for_functions;
 #[derive(PartialEq,Clone,Default)]
 pub struct Account {
     // message fields
-    pub public_key: ::protobuf::Chars,
-    pub label: ::protobuf::Chars,
-    pub description: ::protobuf::Chars,
-    pub holdings: ::std::vec::Vec<::protobuf::Chars>,
+    pub public_key: ::std::string::String,
+    pub label: ::std::string::String,
+    pub description: ::std::string::String,
+    pub holdings: ::protobuf::RepeatedField<::std::string::String>,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
     pub cached_size: ::protobuf::CachedSize,
@@ -41,23 +41,23 @@ impl Account {
     // string public_key = 1;
 
     pub fn clear_public_key(&mut self) {
-        ::protobuf::Clear::clear(&mut self.public_key);
+        self.public_key.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_public_key(&mut self, v: ::protobuf::Chars) {
+    pub fn set_public_key(&mut self, v: ::std::string::String) {
         self.public_key = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_public_key(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_public_key(&mut self) -> &mut ::std::string::String {
         &mut self.public_key
     }
 
     // Take field
-    pub fn take_public_key(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.public_key, ::protobuf::Chars::new())
+    pub fn take_public_key(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.public_key, ::std::string::String::new())
     }
 
     pub fn get_public_key(&self) -> &str {
@@ -67,23 +67,23 @@ impl Account {
     // string label = 2;
 
     pub fn clear_label(&mut self) {
-        ::protobuf::Clear::clear(&mut self.label);
+        self.label.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_label(&mut self, v: ::protobuf::Chars) {
+    pub fn set_label(&mut self, v: ::std::string::String) {
         self.label = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_label(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_label(&mut self) -> &mut ::std::string::String {
         &mut self.label
     }
 
     // Take field
-    pub fn take_label(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.label, ::protobuf::Chars::new())
+    pub fn take_label(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.label, ::std::string::String::new())
     }
 
     pub fn get_label(&self) -> &str {
@@ -93,23 +93,23 @@ impl Account {
     // string description = 3;
 
     pub fn clear_description(&mut self) {
-        ::protobuf::Clear::clear(&mut self.description);
+        self.description.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_description(&mut self, v: ::protobuf::Chars) {
+    pub fn set_description(&mut self, v: ::std::string::String) {
         self.description = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_description(&mut self) -> &mut ::protobuf::Chars {
+    pub fn mut_description(&mut self) -> &mut ::std::string::String {
         &mut self.description
     }
 
     // Take field
-    pub fn take_description(&mut self) -> ::protobuf::Chars {
-        ::std::mem::replace(&mut self.description, ::protobuf::Chars::new())
+    pub fn take_description(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.description, ::std::string::String::new())
     }
 
     pub fn get_description(&self) -> &str {
@@ -123,21 +123,21 @@ impl Account {
     }
 
     // Param is passed by value, moved
-    pub fn set_holdings(&mut self, v: ::std::vec::Vec<::protobuf::Chars>) {
+    pub fn set_holdings(&mut self, v: ::protobuf::RepeatedField<::std::string::String>) {
         self.holdings = v;
     }
 
     // Mutable pointer to the field.
-    pub fn mut_holdings(&mut self) -> &mut ::std::vec::Vec<::protobuf::Chars> {
+    pub fn mut_holdings(&mut self) -> &mut ::protobuf::RepeatedField<::std::string::String> {
         &mut self.holdings
     }
 
     // Take field
-    pub fn take_holdings(&mut self) -> ::std::vec::Vec<::protobuf::Chars> {
-        ::std::mem::replace(&mut self.holdings, ::std::vec::Vec::new())
+    pub fn take_holdings(&mut self) -> ::protobuf::RepeatedField<::std::string::String> {
+        ::std::mem::replace(&mut self.holdings, ::protobuf::RepeatedField::new())
     }
 
-    pub fn get_holdings(&self) -> &[::protobuf::Chars] {
+    pub fn get_holdings(&self) -> &[::std::string::String] {
         &self.holdings
     }
 }
@@ -152,16 +152,16 @@ impl ::protobuf::Message for Account {
             let (field_number, wire_type) = is.read_tag_unpack()?;
             match field_number {
                 1 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.public_key)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.public_key)?;
                 },
                 2 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.label)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.label)?;
                 },
                 3 => {
-                    ::protobuf::rt::read_singular_proto3_carllerche_string_into(wire_type, is, &mut self.description)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.description)?;
                 },
                 4 => {
-                    ::protobuf::rt::read_repeated_carllerche_string_into(wire_type, is, &mut self.holdings)?;
+                    ::protobuf::rt::read_repeated_string_into(wire_type, is, &mut self.holdings)?;
                 },
                 _ => {
                     ::protobuf::rt::read_unknown_or_skip_group(field_number, wire_type, is, self.mut_unknown_fields())?;
@@ -247,22 +247,22 @@ impl ::protobuf::Message for Account {
         unsafe {
             descriptor.get(|| {
                 let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "public_key",
                     |m: &Account| { &m.public_key },
                     |m: &mut Account| { &mut m.public_key },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "label",
                     |m: &Account| { &m.label },
                     |m: &mut Account| { &mut m.label },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "description",
                     |m: &Account| { &m.description },
                     |m: &mut Account| { &mut m.description },
                 ));
-                fields.push(::protobuf::reflect::accessor::make_vec_accessor::<_, ::protobuf::types::ProtobufTypeCarllercheChars>(
+                fields.push(::protobuf::reflect::accessor::make_repeated_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                     "holdings",
                     |m: &Account| { &m.holdings },
                     |m: &mut Account| { &mut m.holdings },
